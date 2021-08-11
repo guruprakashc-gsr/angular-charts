@@ -1,0 +1,13 @@
+<label>
+  <input type="checkbox" value=1
+(change)="chooseEntity($event.target.checked, 1, entityData[0])">
+  Microsoft
+</label>
+<label>
+<input type="checkbox" (change)="chooseEntity($event.target.checked, 2, entityData[1])">
+  IBM
+</label>
+
+<div *ngIf="chartData.length !== 0">
+	<app-limus-utilisation-chart *ngFor="let entity of chartData" [chartdata]="entity"></app-limus-utilisation-chart>
+</div>
